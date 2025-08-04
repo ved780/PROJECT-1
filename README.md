@@ -1,2 +1,33 @@
-# PROJECT-1
- Scan RESULT on Local Network for Open Ports
+# 🔍 Internship Task 1 – Network Port Scanning with Nmap
+
+## 📁 Project Overview
+This project is part of my cybersecurity internship, focused on performing *basic network reconnaissance* by scanning the local network for open ports using *Nmap* and optionally analyzing the network traffic using *Wireshark*.
+
+The objective was to identify services running on different devices in the network and understand how open ports can indicate security risks.
+
+---
+
+## 🛠 Tools Used
+- *Nmap* – to perform TCP SYN scans
+- *GitHub* – for version control and documentation
+
+---
+
+## 📌 Task Objectives
+- Identify local IP range
+- Run a TCP SYN scan using Nmap
+- Document active IPs and their open ports
+- Research common services on these ports
+- Understand potential vulnerabilities associated with open ports
+
+---
+
+## 🧪 Steps Performed
+
+### 1. Identified Local IP Range
+Using the command: ip a
+### 2. Run a TCP SYN scan using Nmap
+Using the command: nmap -sS <ipaddress> -oN scan_result01.txt
+### 3. Documented active IPs and their opened ports on target IPs
+### 4. I mentioned common services running on those open ports.
+### 5. I understood and mentioned potential vulnerabilities assosiated with opened ports.
