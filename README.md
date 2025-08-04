@@ -9,7 +9,7 @@ The objective was to identify services running on different devices in the netwo
 
 ## 🛠 Tools Used
 - *Nmap* – to perform TCP SYN scans
-- *GitHub* – for version control and documentation
+- *GitHub* – for documentation
 
 ---
 
