@@ -1,0 +1,51 @@
+# This is a scan report of Nmap using stealthscan(-sS) on Kali linux.
+
+# Nmap 7.95 scan initiated Mon Aug  4 18:50:54 2025 as: /usr/lib/nmap/nmap -sS -oN scan_result01.txt 10.0.2.15/24
+Nmap scan report for 10.0.2.2
+Host is up (0.0021s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE
+135/tcp open  msrpc
+445/tcp open  microsoft-ds
+MAC Address: 52:55:0A:00:02:02 (Unknown)
+
+Nmap scan report for 10.0.2.3
+Host is up (0.0062s latency).
+Not shown: 999 filtered tcp ports (net-unreach)
+PORT   STATE SERVICE
+53/tcp open  domain
+MAC Address: 52:55:0A:00:02:03 (Unknown)
+
+Nmap scan report for 10.0.2.15
+Host is up (0.0000010s latency).
+All 1000 scanned ports on 10.0.2.15 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+
+# Nmap done at Mon Aug  4 18:51:01 2025 -- 256 IP addresses (3 hosts up) scanned in 6.51 seconds
+# Thre are three opened ports.
+# two opened ports of ipadress : 10.0.2.2
+  135/tcp open  msrpc
+  445/tcp open  microsoft-ds
+# one opened ports on ipaddress : 10.0.2.3
+  53/tcp open domain
+
+ 
+# Here’s an overview of the services typically associated with those open TCP ports:
+
+    #Port 135 (MSRPC - Microsoft Remote Procedure Call)
+
+           This port is used by Microsoft RPC services, which allow communication between software components on a network. 
+    It’s commonly used for Windows services like DCOM and various administrative tasks. Because of its role in Windows networking,
+    it’s often targeted for exploitation, especially in older or unpatched systems.
+
+    #Port 445 (Microsoft-DS - Microsoft Directory Services / SMB)
+
+            Port 445 is used for SMB (Server Message Block) over TCP/IP, which facilitates file sharing, printer sharing,
+     and other network services on Windows networks. SMB has been a frequent target for critical vulnerabilities
+     (e.g., EternalBlue exploit used in WannaCry ransomware). Exposing this port to untrusted networks can be very risky.
+
+    #Port 53 (Domain - DNS)
+
+            As mentioned before, this port is used for DNS services, translating domain names to IP addresses. Open TCP port 53 might
+     indicate support for DNS zone transfers or large DNS queries. Misconfigured DNS servers can be abused for attacks like DNS
+     amplification or information leakage.
