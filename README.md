@@ -24,10 +24,8 @@ The objective was to identify services running on different devices in the netwo
 
 ## 🧪 Steps Performed
 
-### 1. Identified Local IP Range
-Using the command: ip a
-### 2. Run a TCP SYN scan using Nmap
-Using the command: nmap -sS <ipaddress> -oN scan_result01.txt
-### 3. Documented active IPs and their opened ports on target IPs in "scan_result01.txt"
-### 4. I mentioned common services running on those open ports in "scan_result01.txt"
-### 5. I understood and mentioned potential vulnerabilities assosiated with opened ports in "risks_on_results01.txt"
+1. Identified Local IP Range using the command: ip a
+2. Run a TCP SYN scan using Nmap using the command: nmap -sS <ipaddress> -oN scan_result01.txt
+3. Documented active IPs and their opened ports on target IPs in "scan_result01.txt"
+4. I mentioned common services running on those open ports in "scan_result01.txt"
+5. I understood and mentioned potential vulnerabilities assosiated with opened ports in "risks_on_results01.txt"
