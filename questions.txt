@@ -1,0 +1,33 @@
+ ### Here are clear and concise answers to your interview questions:
+
+ 1. What is an open port?
+
+    An open port is a network port on a device that is actively accepting connections or data. It indicates that a service or application is listening on that port, ready to communicate.
+
+ 2. How does Nmap perform a TCP SYN scan?
+
+    Nmap’s TCP SYN scan sends a SYN packet to a target port. If the port responds with a SYN-ACK, it’s considered open. If it responds with a RST, the port is closed. This scan is stealthy because it doesn’t complete the TCP handshake.
+
+ 3. What risks are associated with open ports?
+
+    Open ports can expose services to unauthorized access, exploitation of vulnerabilities, data leakage, and can be entry points for attackers to compromise a system or network.
+
+ 4. Explain the difference between TCP and UDP scanning.
+
+    TCP scanning checks ports by attempting to establish a TCP connection or sending TCP packets, relying on responses like SYN-ACK or RST. UDP scanning sends UDP packets and looks for ICMP unreachable messages or lack of response to determine if a port is open or filtered, which is less reliable and slower.
+
+ 5. How can open ports be secured?
+
+    Open ports can be secured by closing unnecessary ports, using firewalls to restrict access, applying patches and updates, using strong authentication, and encrypting communications.
+
+ 6. What is a firewall's role regarding ports?
+
+    A firewall controls network traffic by allowing or blocking connections to specific ports based on security rules, helping to prevent unauthorized access to services.
+
+ 7. What is a port scan and why do attackers perform it?
+
+    A port scan is a technique used to identify open ports and services on a target system. Attackers perform port scans to find potential entry points and vulnerabilities to exploit.
+
+ 8. How does Wireshark complement port scanning?
+
+    Wireshark captures and analyzes network traffic, allowing detailed inspection of packets sent and received during port scans. It helps verify scan results, detect anomalies, and understand the behavior of network services.
