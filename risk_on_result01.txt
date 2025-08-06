@@ -1,0 +1,72 @@
+# 🔐 Port-Based Security Risk Analysis
+
+ Overview:
+This report highlights the potential security risks associated with commonly open ports found during network scans. Each port is analyzed based on real-world threats, common vulnerabilities, and its role in attack vectors. Proper configuration and access control are essential to mitigate these risks.
+
+---
+
+⚠️ Port 135 (MSRPC - Microsoft Remote Procedure Call)
+
+**Risk Summary:**
+- Commonly exploited on older or unpatched Windows systems.
+- Used by attackers for remote code execution or privilege escalation.
+- Can act as an initial access point for lateral movement in networks.
+
+**Real-World Examples:**
+- Exploited by malware such as the **Blaster worm** to spread within Windows environments.
+
+**Recommendations:**
+- Block at the perimeter firewall.
+- Limit exposure to trusted systems only.
+- Regularly patch Windows systems.
+
+---
+
+ ⚠️ Port 445 (Microsoft-DS / SMB)
+
+**Risk Summary:**
+- Frequently targeted for ransomware propagation (e.g., **WannaCry**, **NotPetya**).
+- Enables file sharing, but when misconfigured or exposed to the internet, it becomes a major vulnerability.
+
+**Attack Techniques:**
+- **SMB Relay Attacks** – impersonate legitimate users.
+- **Remote Code Execution** – via unpatched vulnerabilities (like **EternalBlue**).
+- **Unauthorized File Access** – through misconfigured shares.
+
+**Recommendations:**
+- Never expose SMB to the internet.
+- Disable SMBv1 and audit share permissions.
+- Apply security patches promptly.
+
+---
+
+ ⚠️ Port 53 (DNS - Domain Name System)
+
+**Risk Summary:**
+- Although essential, DNS services can be abused in multiple ways if not properly secured.
+
+**Common Threats:**
+- **DNS Amplification DDoS** – large-scale traffic flooding using open resolvers.
+- **Zone Transfer Leaks** – exposure of internal domain structure to attackers.
+- **DNS Tunneling** – covert channel for data exfiltration or C2 communication.
+- **Cache Poisoning** – redirect users to malicious domains.
+
+**Recommendations:**
+- Restrict zone transfers to authorized IPs.
+- Disable recursion on external-facing DNS servers.
+- Monitor for abnormal DNS query behavior.
+
+---
+
+ ✅ Conclusion:
+
+These ports are often targeted in real-world attacks due to their widespread use and powerful capabilities. As part of a cybersecurity strategy, these ports should be:
+
+- Minimized or blocked if not in use.
+- Monitored actively.
+- Properly patched and hardened.
+- Isolated behind internal firewalls wherever possible.
+
+---
+
+*Prepared by: [Ved Vyas]* 
